@@ -1,6 +1,11 @@
-package com.thecodestress;
+/***
+ * Created by R. M. McGuigan
+ * 10/04/16
+ * Heap Sort class
+ ***/
 
 public class HeapSort {
+
     private static int N;
 
     public static void heapSort(int[] array)
@@ -15,14 +20,14 @@ public class HeapSort {
     }
 
     /* Build heap */
-    public static void heapify(int[] array)
+    private static void heapify(int[] array)
     {
         N = array.length-1;
         for (int i = N/2; i >= 0; i--)
             maxheap(array, i);
     }
 
-    public static void maxheap(int[] array, int i)
+    private static void maxheap(int[] array, int i)
     {
         int left = 2*i ;
         int right = 2*i + 1;
@@ -39,7 +44,7 @@ public class HeapSort {
         }
     }
 
-    public static void swap(int[] array, int one, int two)
+    private static void swap(int[] array, int one, int two)
     {
         array[one] ^= array[two];
         array[two] ^= array[one];
